@@ -6,6 +6,11 @@ What is the largest prime factor of the number 600851475143?
 
 number = 600851475143
 
+def isPrimefactor(n):
+	if(n%2 == 0):
+		return False
+	return True
+
 def primefactors(n):
 	# loop from or towards n and check if disible with prime numbers 
 	# return list of prime factors, as iterable?
