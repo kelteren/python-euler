@@ -6,9 +6,9 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 # solution goes here
 
-def isPalindrome(num):
+def isPalindrome(num:int):
 	# check if num * num yields a palindrome, return true if palindrome or false otherwise
-	#pass
+	pass
 
 
 for i in range(999,0,-1):
