@@ -8,13 +8,11 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
 limit = 1000000000 # adding limit just for avoiding endless loops, hopefully a solution is within limit
 
-def testDisibility(divident, divisors):
+def testDivisibility(divident, divisors):
 	for i in range(divisors+1):
 		if divident % i != 0:
 			return False
 	return True
-
-
 
 for i in range(10+1):
 	print(i)
