@@ -10,7 +10,7 @@ limit = 1000000000 # adding limit just for avoiding endless loops, hopefully a s
 
 def testDisibility(divident, divisors):
 	for i in range(divisors+1):
-		if divident % divisors != 0:
+		if divident % i != 0:
 			return False
 	return True
 
