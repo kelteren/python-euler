@@ -4,14 +4,34 @@ A palindromic number reads the same both ways. The largest palindrome made from 
 Find the largest palindrome made from the product of two 3-digit numbers.
 '''
 
-# solution goes here
+#solved
 
 def isPalindrome(num):
-	# check if num * num yields a palindrome, return true if palindrome or false otherwise
-	#pass
+	original_num = num
+	reverse = 0
 
+	while num > 0:
+		digit = num % 10
+		reverse = reverse * 10 + digit
+		num //= 10
 
-for i in range(999,0,-1):
-	if isPalindrome(i):
-		print(i)
-		break
+	if reverse == original_num:
+		return True
+	else:
+		return False
+
+palY = 0
+palX = 0
+larges_palindrome = 0
+
+for x in range(999,99,-1):
+	for y in range(999,99,-1):
+		product = x*y
+		if (isPalindrome(x*y) and product > larges_palindrome):
+			larges_palindrome = product
+			palY = y
+			palX = x
+			
+print("Largest palindrome is " + str(larges_palindrome) + " and consists of " + str(palX) + " and " + str(palY) )
+
+#solved
