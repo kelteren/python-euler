@@ -1,8 +1,10 @@
-"""The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+"""Summation of Primes
+The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 
 Find the sum of all the primes below two million.
-
 """
+
+# solved
 
 limit = 2000000
 sumPrimes = 0
@@ -29,3 +31,4 @@ for number in range(limit):
 
 print(sumPrimes)
 
+# solved
