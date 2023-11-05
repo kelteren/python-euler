@@ -3,18 +3,22 @@
 What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 """
 
-# solution goes here
+# solved
 
-
-limit = 1000000000 # adding limit just for avoiding endless loops, hopefully a solution is within limit
-
-def testDisibility(divident, divisors):
-	for i in range(divisors+1):
-		if divident % divisors != 0:
+def testDivisibility(divident, divisors):
+	for i in range(1,divisors+1):
+		if divident % i != 0:
 			return False
 	return True
 
+i = 1
+found = False
 
+while found != True:
+	if testDivisibility(i,20):
+		print(i)
+		found = True
+		break
+	i += 1
 
-for i in range(10+1):
-	print(i)
+# solved
