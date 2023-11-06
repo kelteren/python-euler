@@ -1,4 +1,5 @@
-"""The sum of the squares of the first ten natural numbers is,
+"""Sum Square Difference
+The sum of the squares of the first ten natural numbers is,
 
 	1² +  2² + ... + 10² = 385
 

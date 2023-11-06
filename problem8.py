@@ -1,4 +1,5 @@
-"""The four adjacent digits in the -digit number that have the greatest product are 9 x 9 x 8 x 9 = 5832.
+"""Largest Product in a Series
+The four adjacent digits in the -digit number that have the greatest product are 9 x 9 x 8 x 9 = 5832.
 
 73167176531330624919225119674426574742355349194934
 96983520312774506326239578318016984801869478851843
