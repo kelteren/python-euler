@@ -8,7 +8,7 @@ By considering the terms in the Fibonacci sequence whose values do not exceed fo
 
 #solved
 
-max = 4000000
+max = 4_000_000
 sum = 0
 
 a, b = 1,2
