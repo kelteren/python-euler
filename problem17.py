@@ -17,60 +17,62 @@ def num_letters(word:str):   # useless function
 
 def num_to_letter(num):
 	match num:
+		case 0:
+			return "zero"
 		case 1:
-			return "one":
+			return "one"
 		case 2:
-			return "two":
+			return "two"
 		case 3:
-			return "three":
+			return "three"
 		case 4:
-			return "four":
+			return "four"
 		case 5:
-			return "five":
+			return "five"
 		case 6:
-			return "six":
+			return "six"
 		case 7:
-			return "seven":
+			return "seven"
 		case 8:
-			return "eight":
+			return "eight"
 		case 9:
-			return "nine":
+			return "nine"
 		case 10:
-			return "ten":
+			return "ten"
 		case 11:
-			return "eleven":
+			return "eleven"
 		case 12:
-			return "twelve":
+			return "twelve"
 		case 13:
-			return "thirteen":
+			return "thirteen"
 		case 14:
-			return "fourteen":
+			return "fourteen"
 		case 15:
-			return "fifteen":
+			return "fifteen"
 		case 16:
-			return "sixteen":
+			return "sixteen"
 		case 17:
-			return "seventeen":
+			return "seventeen"
 		case 18:
-			return "eighteen":
+			return "eighteen"
 		case 19:
-			return "nineteen":
+			return "nineteen"
 		case 20:
-			return "twenty":
+			return "twenty"
 		case 30:
-			return "thirty":
+			return "thirty"
 		case 40:
-			return "fourty":
+			return "fourty"
 		case 50:
-			return "fifty":
+			return "fifty"
 		case 60:
-			return "sixty":
+			return "sixty"
 		case 70:
-			return "seventy":
+			return "seventy"
 		case 80:
-			return "eighty":
+			return "eighty"
 		case 90:
-			return "ninety":
+			return "ninety"
 
 def num2words(num):
 	# return number as written out in words
@@ -84,7 +86,7 @@ def num2words(num):
 letters = 0
 
 for number in range(1,1000 + 1):
-	# do something with number
+	# do something with number to determine amount of letters
 	letters += number
 	pass
 
