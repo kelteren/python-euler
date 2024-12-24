@@ -12,9 +12,6 @@ NOTE: Do not count spaces or hyphens. For example,
 
 # defining functions
 
-def num_letters(word:str):   # useless function
-	return len(word)
-
 def num_to_letter(num):
 	match num:
 		case 0:
@@ -74,22 +71,39 @@ def num_to_letter(num):
 		case 90:
 			return "ninety"
 
+def num_letters(word:str):   # useless function
+	return len(word)
+
 def num2words(num):
 	# return number as written out in words
-	pass
+	enere = ['zero','one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen']
+	tiere = [None,None,'twenty','thirty','fourty','fifty','sixty','seventy','eighty','ninety']
 
-# testing functions
-# print(num_letters('five three one'))
+	if 0 <= num <= 9:
+		return enere[num]
+	elif 10 <= num <= 19:
+		return enere[num]
+	elif 20 <= num <= 90 and num % 10 == 0:
+		return tiere[num//10]
+	elif 20 <= num <= 100:
+		return tiere[num//10] + enere[num % 10]
+	else:
+		pass
 
+for i in range(0,67):
+	print(num2words(i))
 
 # solving the case
 letters = 0
+upper_limit = 1000
 
-for number in range(1,1000 + 1):
+for number in range(1 , upper_limit + 1):
+
 	# do something with number to determine amount of letters
+
 	letters += number
 	pass
 
-print(letters)
+# print(letters)
 
 # unsolved
