@@ -6,7 +6,7 @@
 
 # What is the total of all the name scores in the file?
 
-# solved
+# solved and optimized
 
 def name_score(name: str) -> int:
     # Calculate alphabetical value (A=1, B=2, ..., Z=26)
@@ -35,4 +35,4 @@ for index, name in enumerate(names):
 
 print(total_score_of_all_names)
 
-# solved
+# solved and optimized
