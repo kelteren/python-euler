@@ -6,61 +6,33 @@
 
 # What is the total of all the name scores in the file?
 
-# solved poorly
+# solved
 
-
-alfabet = 'abcdefghijklmnopqrstuvwxyz'
-
-def name_value(name: str) -> int:
+def name_score(name: str) -> int:
     # Calculate alphabetical value (A=1, B=2, ..., Z=26)
     return sum(ord(char) - ord('A') + 1 for char in name)
 
-def score(name:str, name_list:[str]) -> int:
-	score = 0
+with open('0022_names.txt') as file:
+	names = file.read()
 
-	# loop through name, find first factor
-	name = name.lower()
-	for char in name:					# loop through each character in the name
-		factor_1 = 0 					# sets factor to 0
-		for count in alfabet: 			# loop though the alphabet, increments the counter and checks  
-			factor_1 += 1  				# for equality with current character
-			if count == char:
-				score += factor_1
-				break
-
-	# factor_1 = name_value(name)
-
-	# loop through namelist, find second factor
-	name_counter = 0
-	for word in name_list:
-		name_counter += 1
-		if word.lower() == name:
-			score = score * name_counter
-	return score
-
-# TODO create a function that uses a direct value assignment
-def name_value():
-	pass 	# use direct function for calculating name value
-
-with open('0022_names.txt') as f:
-	content = f.read()
-
-# sanitizing the name list
-# names = content.strip().strip(',').split(',')
-names = content.strip().split(',')
+# sanitizing the name list and sorting
+names = names.strip().split(',')
 names = [name.strip('"') for name in names]
 names.sort()
 
-# testing with the testvector 'Colin', known to yield '49714'
-# print(score('COLIN', names))
-
 total_score_of_all_names = 0
 
+for index, name in enumerate(names):
+	total_score_of_all_names += (index + 1) * name_score(name)
 
-# TODO replace with a list comprehension and 
-for name in names:
-	total_score_of_all_names += score(name, names)
+	# testing with the testvector 'Colin', known to yield '49714'
+	# print(score('COLIN', names))
+
+	# if(name == 'COLIN'):
+	# 	print('found',index,name)
+	# 	nv:str = name_score(str(name))
+	# 	print(f'Score = {index+1} * {nv} = {(index+1)*nv} ')
 
 print(total_score_of_all_names)
 
-# solved poorly
+# solved
