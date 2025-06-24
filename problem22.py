@@ -15,7 +15,6 @@ def name_value(name: str) -> int:
     # Calculate alphabetical value (A=1, B=2, ..., Z=26)
     return sum(ord(char) - ord('A') + 1 for char in name)
 
-
 def score(name:str, name_list:[str]) -> int:
 	score = 0
 
@@ -46,8 +45,9 @@ def name_value():
 with open('0022_names.txt') as f:
 	content = f.read()
 
-# sanitizing the name liste
-names = content.strip().strip(',').split(',')
+# sanitizing the name list
+# names = content.strip().strip(',').split(',')
+names = content.strip().split(',')
 names = [name.strip('"') for name in names]
 names.sort()
 
