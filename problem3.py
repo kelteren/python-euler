@@ -8,25 +8,31 @@ What is the largest prime factor of the number 600851475143?
 
 number = 600851475143
 
-def isPrime(num):
-    if num <= 1:
-        return False
+# def isPrime(num):
+#     if num <= 1:
+#         return False
     
-    if num ==2 :
-        return True
+#     if num ==2 :
+#         return True
 
-    if num % 2 == 0:
-    	return False
+#     if num % 2 == 0:
+#     	return False
     
-    for i in range(3, int(num**0.5) + 1,2):
-        if num % i == 0:
-            return False
-    return True
+#     for i in range(3, int(num**0.5) + 1,2):
+#         if num % i == 0:
+#             return False
+#     return True
 
 def primefactors(n):
-	# loop from or towards n and check if disible with prime numbers 
+	# loop from or towards n and check if divisible with prime numbers 
 	# return list of prime factors, as iterable?
+    i = 2
+    while i**2 < n:
+        while n % i == 0:
+            n = n / i
+        i += 1
+    return int(n)
 
-primefactors(number) 
+print(primefactors(number)) 
 
 # solved
